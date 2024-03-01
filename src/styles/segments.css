@@ -1,0 +1,26 @@
+.segmented-control {
+  width: 300px;
+  height: 32px;
+  display: flex;
+  border-radius: 8px;
+  background-color: #e9eaf1;
+  padding: 1px;
+}
+
+.segmented-control-button {
+  flex: 1;
+  height: 100%;
+  font-size: 14px;
+  border: 1px solid #e9eaf1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.segmented-control-button.active {
+  border: 0.5px solid #E2E9FC;
+  background-color: #ffffff;
+}
