@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Maria from "../assets/images/profilePics/Maria.png";
-import { FaSearch } from "react-icons/fa";
+import { GoSearch } from "react-icons/go";
 import GoodMorning from "../assets/images/iconImages/GoodMorning.png";
 import SaveAdd from "../assets/images/iconImages/save-add.png";
 import "../styles/contacts.css";
@@ -16,10 +16,11 @@ const Contacts = () => {
   return (
     <div className="contact-main-container">
       <div className="flex flex-row mb-5">
-        <div className="profile-picture-container">
-          <img src={Maria} alt="contactImg" className="contact-header-image" />
+        <div className="contact-header-img-container">
+          <img src={Maria} alt="contactImg" className="profile-img" />
           <div className="indicator online"></div>
         </div>
+
         <div>
           <h2 className="profile-name text-[24px]">Maria Luisa</h2>
           <div className="flex flex-row">
@@ -36,7 +37,7 @@ const Contacts = () => {
             className="search-input"
             placeholder="People, groups, messeages..."
           />
-          <FaSearch className="search-icon" />
+          <GoSearch className="search-icon" />
         </div>
         <div className="save-container">
           <img src={SaveAdd} alt="save-add" />
@@ -54,14 +55,12 @@ const Contacts = () => {
         <div className="contact-box">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
 
               <div>
-                <h2 className="profile-name">Maria Luisa</h2>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
                 <div className="flex flex-row">
                   <p className="preview-text text-[14px]">Typing...</p>
                 </div>
@@ -71,53 +70,9 @@ const Contacts = () => {
               <p className="preview-text text-[12px] mt-1">9:13 AM</p>
               <div className="flex justify-end">
                 <div className="unread-count-container">
-                  <p className="unread-count">18</p>
+                  <p className="unread-count">8</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="contact-box">
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
-
-              <div>
-                <h2 className="profile-name">Maria Luisa</h2>
-                <div className="flex flex-row">
-                  <p className="preview-text text-[14px]">Typing...</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="contact-box">
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
-
-              <div>
-                <h2 className="profile-name">Maria Luisa</h2>
-                <div className="flex flex-row">
-                  <p className="preview-text text-[14px]">Typing...</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
             </div>
           </div>
         </div>
@@ -128,14 +83,12 @@ const Contacts = () => {
         <div className="contact-box">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
 
               <div>
-                <h2 className="profile-name">Maria Luisa</h2>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
                 <div className="flex flex-row">
                   <p className="preview-text text-[14px]">Typing...</p>
                 </div>
@@ -155,57 +108,12 @@ const Contacts = () => {
         <div className="contact-box">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
-
-              <div>
-                <h2 className="profile-name">Maria Luisa</h2>
-                <div className="flex flex-row">
-                  <p className="preview-text text-[14px]">Typing...</p>
-                </div>
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
               </div>
-            </div>
-            <div>
-              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="contact-box">
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
 
               <div>
-                <h2 className="profile-name">Maria Luisa</h2>
-                <div className="flex flex-row">
-                  <p className="preview-text text-[14px]">Typing...</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
-            </div>
-          </div>
-        </div>
-        <div className="contact-box">
-          <div className="flex flex-row justify-between">
-            <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
-
-              <div>
-                <h2 className="profile-name">Maria Luisa</h2>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
                 <div className="flex flex-row">
                   <p className="preview-text text-[14px]">Typing...</p>
                 </div>
@@ -221,18 +129,15 @@ const Contacts = () => {
             </div>
           </div>
         </div>
-
         <div className="contact-box">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
 
               <div>
-                <h2 className="profile-name">Maria Luisa</h2>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
                 <div className="flex flex-row">
                   <p className="preview-text text-[14px]">Typing...</p>
                 </div>
@@ -240,21 +145,23 @@ const Contacts = () => {
             </div>
             <div>
               <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-
         <div className="contact-box">
           <div className="flex flex-row justify-between">
             <div className="flex flex-row">
-              <img
-                src={Maria}
-                alt="contactImg"
-                className="contacts-profile-pic"
-              />
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
 
               <div>
-                <h2 className="profile-name">Maria Luisa</h2>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
                 <div className="flex flex-row">
                   <p className="preview-text text-[14px]">Typing...</p>
                 </div>
@@ -262,6 +169,155 @@ const Contacts = () => {
             </div>
             <div>
               <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-box">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
+
+              <div>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
+                <div className="flex flex-row">
+                  <p className="preview-text text-[14px]">Typing...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-box">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
+
+              <div>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
+                <div className="flex flex-row">
+                  <p className="preview-text text-[14px]">Typing...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-box">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
+
+              <div>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
+                <div className="flex flex-row">
+                  <p className="preview-text text-[14px]">Typing...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-box">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
+
+              <div>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
+                <div className="flex flex-row">
+                  <p className="preview-text text-[14px]">Typing...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-box">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
+
+              <div>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
+                <div className="flex flex-row">
+                  <p className="preview-text text-[14px]">Typing...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="contact-box">
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <div className="contact-profile-img-container">
+                <img src={Maria} alt="contactImg" className="profile-img" />
+              </div>
+
+              <div>
+                <h2 className="profile-name mb-1">Maria Luisa</h2>
+                <div className="flex flex-row">
+                  <p className="preview-text text-[14px]">Typing...</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="preview-text text-[12px] mt-1">9:13 AM</p>
+              <div className="flex justify-end">
+                <div className="unread-count-container">
+                  <p className="unread-count">18</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
