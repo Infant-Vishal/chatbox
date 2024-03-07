@@ -7,18 +7,60 @@ import { CiFileOn } from "react-icons/ci";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import Sunset from "../assets/images/sentImages/Sunset.png";
+import AirBalloon from "../assets/images/sentImages/AirBalloon.png";
+import Airport from "../assets/images/sentImages/Airport.png";
+import HeartIsland from "../assets/images/sentImages/HeartIsland.png";
+import HillTop from "../assets/images/sentImages/HillTop.png";
+import Island from "../assets/images/sentImages/Island.png";
+import WomanChurch from "../assets/images/sentImages/WomanChurch.png";
 import "../styles/profile.css";
 
 const Profile = () => {
   const currentContact = useSelector((state) => state?.currentContact);
+  const [showAllAttachements, setShowAllAttachements] = useState(false);
   const [showAllImages, setShowAllImages] = useState(false);
 
-  const images = [Sunset, Sunset, Sunset, Sunset, Sunset, Sunset, Sunset];
+  const attachements = [
+    {
+      icon: <CiFileOn color="#757575" size={18} />,
+      name: "Poco phone.png",
+    },
+    {
+      icon: <MdOutlineFileDownload color="#757575" size={18} />,
+      name: "Play date.mp3",
+    },
+    {
+      icon: <CiFileOn color="#757575" size={18} />,
+      name: "Final file.pdf",
+    },
+    {
+      icon: <MdOutlineFileDownload color="#757575" size={18} />,
+      name: "Play date.mp3",
+    },
+    {
+      icon: <CiFileOn color="#757575" size={18} />,
+      name: "Final file.pdf",
+    },
+  ];
+  const images = [
+    Sunset,
+    AirBalloon,
+    Airport,
+    HeartIsland,
+    HillTop,
+    Island,
+    WomanChurch,
+  ];
+
+  const handleViewAttachemnt = () => {
+    setShowAllAttachements(!showAllAttachements);
+  };
 
   const toggleImages = () => {
     setShowAllImages(!showAllImages);
   };
 
+  const attachementsToShow = showAllAttachements ? attachements.length : 3;
   const imagesToShow = showAllImages ? images.length : 3;
 
   return (
@@ -68,23 +110,19 @@ const Profile = () => {
           <h4 className="profile-side-headings">Attachments</h4>
           <div className="flex justify-between items-center mb-4">
             <h5 className="attachement-text">Source file</h5>
-            <p className="view-all-text">View all</p>
+            <p className="view-all-text" onClick={handleViewAttachemnt}>
+              {showAllAttachements ? "Show less" : "View all"}
+            </p>
           </div>
           <div>
-            <div className="flex mb-3">
-              <CiFileOn color="#757575" size={18} />
-              <span className="attachement-text ml-3">Poco phone.png</span>
-            </div>
-
-            <div className="flex mb-3">
-              <MdOutlineFileDownload color="#757575" size={18} />
-              <span className="attachement-text ml-3">Play date.mp3</span>
-            </div>
-
-            <div className="flex mb-3">
-              <CiFileOn color="#757575" size={18} />
-              <span className="attachement-text ml-3">Final file.pdf</span>
-            </div>
+            {attachements.slice(0, attachementsToShow)?.map((attachement) => (
+              <div className="flex mb-3">
+                {attachement.icon}
+                <span className="attachement-text ml-3">
+                  {attachement.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 

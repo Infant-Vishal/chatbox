@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { format, isSameDay } from "date-fns";
 import { GoSearch } from "react-icons/go";
@@ -14,7 +14,6 @@ const Chat = () => {
   const [message, setMessage] = useState("");
 
   const allContactsChats = getAllChatByContact(chats);
-
   const currentChat = allContactsChats[currentContact?.name];
 
   const handleSendMessage = (e) => {
