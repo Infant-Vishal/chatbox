@@ -88,12 +88,12 @@ const Profile = () => {
         </div>
 
         <div className="header-options-container">
-          <div className="header-indv-option-container ">
+          <div className="header-indv-option-container">
             <IoCall color="#417DD9" size={20} />
             <p className="profile-online-text text-[12px] mt-2">Call</p>
           </div>
 
-          <div className="header-indv-option-container ">
+          <div className="header-indv-option-container">
             <BiSolidMessageDetail color="#417DD9" size={24} />
             <p className="profile-online-text text-[12px] mt-2">Message</p>
           </div>
@@ -153,12 +153,12 @@ const Profile = () => {
         </div>
         <hr />
         <div className="my-8">
-          <div className="flex mb-6 items-center">
+          <div className="flex mb-6 items-center cursor-pointer">
             <AiOutlineQuestionCircle color="#757575" size={20} />
             <span className="footer-text">Help</span>
           </div>
 
-          <div className="flex mb-3 items-center">
+          <div className="flex mb-3 items-center cursor-pointer">
             <IoSettingsOutline color="#757575" size={20} />
             <span className="footer-text">Settings</span>
           </div>

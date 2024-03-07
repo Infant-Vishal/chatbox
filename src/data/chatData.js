@@ -42,7 +42,6 @@ export const chatData = [
     message: "Let's discuss the budget proposal tomorrow.",
   },
 
-  // Received messages
   {
     id: 7,
     contactName: "Robert Fox",

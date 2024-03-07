@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { format } from "date-fns";
 import Maria from "../assets/images/profilePics/Maria.png";
-import { GoSearch } from "react-icons/go";
 import GoodMorning from "../assets/images/iconImages/GoodMorning.png";
+import { GoSearch } from "react-icons/go";
 import SaveAdd from "../assets/images/iconImages/save-add.png";
-import "../styles/contacts.css";
 import SegmentedControl from "./SegmentedControl";
 import { alterCurrentChat } from "../features/slices/chatBoxSlice";
 import { getAllChatByContact } from "../utils/getAllChatByContact";
-import { format } from "date-fns";
+import "../styles/contacts.css";
 
 const Contacts = () => {
   const dispatch = useDispatch();
