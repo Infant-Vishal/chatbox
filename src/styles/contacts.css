@@ -74,6 +74,7 @@
 
 .contact-box {
   padding: 10px 5px;
+  cursor: default;
 }
 .contact-box:hover {
   background-color: #f3f6ff;

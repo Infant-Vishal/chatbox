@@ -1,27 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import { IoIosMore } from "react-icons/io";
-import { IoCall, IoSettingsOutline  } from "react-icons/io5";
+import { IoCall, IoSettingsOutline } from "react-icons/io5";
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { CiFileOn } from "react-icons/ci";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
-import Maria from "../assets/images/profilePics/Maria.png";
 import Sunset from "../assets/images/sentImages/Sunset.png";
 import "../styles/profile.css";
 
 const Profile = () => {
+  const currentContact = useSelector((state) => state?.currentContact);
+  const [showAllImages, setShowAllImages] = useState(false);
+
+  const images = [Sunset, Sunset, Sunset, Sunset, Sunset, Sunset, Sunset];
+
+  const toggleImages = () => {
+    setShowAllImages(!showAllImages);
+  };
+
+  const imagesToShow = showAllImages ? images.length : 3;
+
   return (
     <div className="profile-main-container">
       <div className="profile-header">
         <div className="flex flex-col items-center">
           <div className="profile-header-img">
-            <img src={Maria} alt="profile-pic" className="profile-img" />
+            <img
+              src={currentContact?.profilePic}
+              alt="profile-pic"
+              className="profile-img"
+            />
           </div>
-          <h3 className="profile-header-name">Robert Luis</h3>
-          <div className="flex items-center">
-            <div className="profile-online-indicator"></div>
-            <p className="profile-online-text text-[14px]">Online Now</p>
-          </div>
+          <h3 className="profile-header-name">{currentContact?.name}</h3>
+          {currentContact?.isOnline === true ? (
+            <div className="flex items-center">
+              <div className="profile-online-indicator"></div>
+              <p className="profile-online-text text-[14px]">Online Now</p>
+            </div>
+          ) : (
+            <div className="flex items-center">
+              <p className="profile-online-text text-[14px]">Offline</p>
+            </div>
+          )}
         </div>
 
         <div className="header-options-container">
@@ -70,14 +91,26 @@ const Profile = () => {
         <div className="mb-6">
           <h3 className="profile-side-headings">Picture & Videos</h3>
           <div className="grid grid-cols-3 gap-y-3">
-            <img src={Sunset} className="shared-item-preview" />
+            {images.slice(0, imagesToShow).map((image, index) => (
+              <div key={index} className="img-wrapper">
+                <img
+                  src={image}
+                  className="shared-item-preview"
+                  alt="shared-img"
+                />
 
-            <img src={Sunset} className="shared-item-preview" />
-            <img src={Sunset} className="shared-item-preview" />
-            <img src={Sunset} className="shared-item-preview" />
-            <img src={Sunset} className="shared-item-preview" />
-            <img src={Sunset} className="shared-item-preview" />
-            <img src={Sunset} className="shared-item-preview" />
+                {index === 2 && imagesToShow === 3 && (
+                  <div
+                    className="extend-img-wrap"
+                    onClick={
+                      index === imagesToShow - 1 ? toggleImages : undefined
+                    }
+                  >
+                    +4
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
         <hr />
